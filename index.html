@@ -278,15 +278,15 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
       <span class="modal-title" id="modal-cert-title">Certificate</span>
       <button class="modal-close" onclick="closeCertModal()">✕</button>
     </div>
-    <div class="modal-body">
-      <div class="modal-loading" id="modal-loading">
+    <div class="modal-body" style="padding:0;min-height:500px;position:relative;">
+      <div class="modal-loading" id="modal-loading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
         <div class="loader-ring"></div>
-        <p>Loading certificate...</p>
+        <p style="font-size:12px;font-family:'Space Mono',monospace;color:var(--muted);letter-spacing:2px;">Loading certificate...</p>
       </div>
-      <iframe class="modal-iframe" id="modal-iframe" src="" onload="onIframeLoad()" style="display:none"></iframe>
-    </div>
-    <div class="modal-footer">
-      <a id="modal-drive-link" href="#" target="_blank" class="modal-open-drive">↗ Open in Drive</a>
+      <iframe id="modal-iframe" src="" frameborder="0" allowfullscreen
+        style="width:100%;height:75vh;border:none;display:block;"
+        onload="document.getElementById('modal-loading').style.display='none'">
+      </iframe>
     </div>
   </div>
 </div>
@@ -370,7 +370,7 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
         <div class="about-stat-grid">
           <div class="stat-card"><div class="stat-number">9.3</div><div class="stat-label">CGPA</div></div>
           <div class="stat-card"><div class="stat-number">3+</div><div class="stat-label">Projects</div></div>
-          <div class="stat-card"><div class="stat-number">8+</div><div class="stat-label">Certifications</div></div>
+          <div class="stat-card"><div class="stat-number">5+</div><div class="stat-label">Certifications</div></div>
           <div class="stat-card"><div class="stat-number">2+</div><div class="stat-label">Internships</div></div>
         </div>
       </div>
@@ -420,21 +420,21 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
         <div class="project-title">Research Paper Sentiment Analysis Web App</div>
         <ul class="project-desc"><li>Full-stack web application using Node.js, Express.js, and MongoDB</li><li>Upload and analyze research papers with automatic dataset detection</li><li>Sentiment analysis dashboard with data visualization features</li></ul>
         <div class="tech-badges"><span class="tech-badge">Node.js</span><span class="tech-badge">Express.js</span><span class="tech-badge">MongoDB</span></div>
-        <div class="project-links"><a href="https://github.com" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Live Demo</a></div>
+        <div class="project-links"><a href="https://github.com/OrsuVennela" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Live Demo</a></div>
       </div>
       <div class="project-card reveal">
         <div class="project-number">02 / EMBEDDED AI</div>
         <div class="project-title">Smart Lock System Using Face & Fingerprint Recognition</div>
         <ul class="project-desc"><li>Arduino Uno based smart security system with biometric authentication</li><li>Face recognition via webcam + fingerprint-based secure access</li><li>Real-time recognition with secure hardware integration</li></ul>
         <div class="tech-badges"><span class="tech-badge">Arduino Uno</span><span class="tech-badge">Face Recognition</span><span class="tech-badge">Fingerprint Module</span></div>
-        <div class="project-links"><a href="https://github.com" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Demo</a></div>
+        <div class="project-links"><a href="https://github.com/OrsuVennela" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Demo</a></div>
       </div>
       <div class="project-card reveal">
         <div class="project-number">03 / AI POWERED</div>
         <div class="project-title">AI Code Analyzer</div>
         <ul class="project-desc"><li>AI-powered bug detection web application with auth system</li><li>Detects syntax and logical errors in submitted code</li><li>AI-generated suggestions for fixes via smart code analysis dashboard</li></ul>
         <div class="tech-badges"><span class="tech-badge">Node.js</span><span class="tech-badge">AI APIs</span><span class="tech-badge">Authentication</span></div>
-        <div class="project-links"><a href="https://github.com" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Demo</a></div>
+        <div class="project-links"><a href="https://github.com/OrsuVennela" target="_blank" class="proj-btn github">⟨/⟩ GitHub</a><a href="#" class="proj-btn demo">↗ Demo</a></div>
       </div>
     </div>
   </div>
@@ -497,14 +497,11 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
       <h2 class="section-title">Certifications & <span class="gradient-text">Courses</span></h2>
     </div>
     <div class="certs-grid">
-      <div class="cert-card reveal" onclick="openCertModal('Fundamentals of Deep Learning — NVIDIA','https://drive.google.com/file/d/1jXIX_uCdnqLCyVAeFipfTdi8pfIxeqFA/view?usp=sharing')"><div class="cert-icon">🟢</div><div class="cert-info"><strong>Fundamentals of Deep Learning</strong><span>NVIDIA Deep Learning Institute</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Introduction to Deep Learning','https://drive.google.com/file/d/1t6r4y2FAHRAyXZCGkFRFCxLb-b5KG41J/view?usp=sharing')"><div class="cert-icon">🧠</div><div class="cert-info"><strong>Introduction to Deep Learning</strong><span>Certificate of Competency</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Introduction to Packet Tracer — Cisco','https://drive.google.com/file/d/1v5CTpnxlL7QrSUgcQOGcIW5hFn8t_CoK/view?usp=sharing')"><div class="cert-icon">🌐</div><div class="cert-info"><strong>Introduction to Packet Tracer</strong><span>Cisco Networking Academy</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Introduction to Cybersecurity — Cisco','https://drive.google.com/file/d/1AzTMq0pQmTdq61YxVVh7Sx-bj3vPycJJ/view?usp=sharing')"><div class="cert-icon">🔒</div><div class="cert-info"><strong>Introduction to Cybersecurity</strong><span>Cisco Networking Academy</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Data Analytics Job Simulation — Deloitte','https://drive.google.com/file/d/1AY5tUiS3CjQZKfxuS7bN_xoUYRPWAEPL/view?usp=sharing')"><div class="cert-icon">📊</div><div class="cert-info"><strong>Data Analytics Job Simulation</strong><span>Deloitte</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('BE10X Certificate','https://drive.google.com/file/d/1qTTHIpwb50iLymHVlq194E2dE64WEbi-/view?usp=sharing')"><div class="cert-icon">🎯</div><div class="cert-info"><strong>BE10X Certificate</strong><span>AI Tools & Productivity</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Hackathon Participation Certificate','https://drive.google.com/file/d/13BWH-YLgn-ppdwsWPd1Ao5A2LAV2jcIu/view?usp=sharing')"><div class="cert-icon">🏅</div><div class="cert-info"><strong>Hackathon Participation Certificate</strong><span>Tech Storm Hackathon</span></div><div class="cert-view-btn">VIEW</div></div>
-      <div class="cert-card reveal" onclick="openCertModal('Additional Certification','https://drive.google.com/file/d/19z2a0NftucncYZ48rNVy_FtDp-mbO_uu/view?usp=sharing')"><div class="cert-icon">⭐</div><div class="cert-info"><strong>Additional Certification</strong><span>Professional Achievement</span></div><div class="cert-view-btn">VIEW</div></div>
+      <div class="cert-card reveal" onclick="openCertModal('Fundamentals of Deep Learning — NVIDIA','1jXIX_uCdnqLCyVAeFipfTdi8pfIxeqFA')"><div class="cert-icon">🟢</div><div class="cert-info"><strong>Fundamentals of Deep Learning</strong><span>NVIDIA Deep Learning Institute</span></div><div class="cert-view-btn">VIEW</div></div>
+      <div class="cert-card reveal" onclick="openCertModal('Introduction to Packet Tracer — Cisco','1v5CTpnxlL7QrSUgcQOGcIW5hFn8t_CoK')"><div class="cert-icon">🌐</div><div class="cert-info"><strong>Introduction to Packet Tracer</strong><span>Cisco Networking Academy</span></div><div class="cert-view-btn">VIEW</div></div>
+      <div class="cert-card reveal" onclick="openCertModal('Introduction to Cybersecurity — Cisco','1AzTMq0pQmTdq61YxVVh7Sx-bj3vPycJJ')"><div class="cert-icon">🔒</div><div class="cert-info"><strong>Introduction to Cybersecurity</strong><span>Cisco Networking Academy</span></div><div class="cert-view-btn">VIEW</div></div>
+      <div class="cert-card reveal" onclick="openCertModal('Data Analytics Job Simulation — Deloitte','1AY5tUiS3CjQZKfxuS7bN_xoUYRPWAEPL')"><div class="cert-icon">📊</div><div class="cert-info"><strong>Data Analytics Job Simulation</strong><span>Deloitte</span></div><div class="cert-view-btn">VIEW</div></div>
+      <div class="cert-card reveal" onclick="openCertModal('Azure AI Fundamentals (AI-900) — Microsoft','1pkBwgqycRsaq7MTTAsWUsuz6KdDuLoP3')"><div class="cert-icon">☁️</div><div class="cert-info"><strong>Azure AI Fundamentals (AI-900)</strong><span>Microsoft Certified</span></div><div class="cert-view-btn">VIEW</div></div>
     </div>
   </div>
 </section>
@@ -523,8 +520,8 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
       <div class="reveal-left">
         <div class="contact-info">
           <a href="mailto:orsuvennela1513@gmail.com" class="contact-link"><div class="contact-link-icon">✉️</div><div><div style="font-weight:600;margin-bottom:2px">Email</div><div style="font-size:13px;color:var(--muted)">orsuvennela1513@gmail.com</div></div></a>
-          <a href="https://github.com" target="_blank" class="contact-link"><div class="contact-link-icon">⟨/⟩</div><div><div style="font-weight:600;margin-bottom:2px">GitHub</div><div style="font-size:13px;color:var(--muted)">View my repositories</div></div></a>
-          <a href="https://linkedin.com" target="_blank" class="contact-link"><div class="contact-link-icon">in</div><div><div style="font-weight:600;margin-bottom:2px">LinkedIn</div><div style="font-size:13px;color:var(--muted)">Professional profile</div></div></a>
+          <a href="https://github.com/OrsuVennela" target="_blank" class="contact-link"><div class="contact-link-icon">⟨/⟩</div><div><div style="font-weight:600;margin-bottom:2px">GitHub</div><div style="font-size:13px;color:var(--muted)">View my repositories</div></div></a>
+          <a href="https://www.linkedin.com/in/orsu-vennela-0839b1321/" target="_blank" class="contact-link"><div class="contact-link-icon">in</div><div><div style="font-weight:600;margin-bottom:2px">LinkedIn</div><div style="font-size:13px;color:var(--muted)">Professional profile</div></div></a>
         </div>
       </div>
       <div class="reveal-right">
@@ -540,13 +537,15 @@ footer{padding:40px 0;border-top:1px solid var(--glass-border);position:relative
 </section>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-copy">© 2024 Orsu Vennela — Built with ❤️ & code</div>
-    <div class="footer-socials">
-      <a href="mailto:orsuvennela1513@gmail.com" class="social-btn" title="Email">✉️</a>
-      <a href="https://github.com" target="_blank" class="social-btn" title="GitHub">⟨/⟩</a>
-      <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn">in</a>
+  <div class="footer-inner" style="flex-direction:column;align-items:center;text-align:center;gap:24px">
+    <p style="font-size:18px;font-weight:600;color:var(--text);letter-spacing:0.5px">Let's build something meaningful together.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;font-size:14px">
+      <a href="mailto:orsuvennela1513@gmail.com" style="display:inline-flex;align-items:center;gap:6px;color:var(--muted);transition:color 0.3s" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">📧 orsuvennela1513@gmail.com</a>
+      <a href="tel:6302590734" style="display:inline-flex;align-items:center;gap:6px;color:var(--muted);transition:color 0.3s" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">📞 6302590734</a>
+      <a href="https://www.linkedin.com/in/orsu-vennela-0839b1321/" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:var(--muted);transition:color 0.3s" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">🔗 LinkedIn</a>
+      <a href="https://github.com/OrsuVennela" target="_blank" style="display:inline-flex;align-items:center;gap:6px;color:var(--muted);transition:color 0.3s" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--muted)'">💻 GitHub</a>
     </div>
+    <div class="footer-copy">© 2025 Orsu Vennela · Warangal, Telangana, India · B.Tech CS AI &amp; ML · SR University · 2023–2027</div>
     <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
   </div>
 </footer>
@@ -629,31 +628,21 @@ function handleSubmit(e){
 }
 
 // CERTIFICATE MODAL
-function openCertModal(title, driveUrl){
-  document.getElementById('modal-cert-title').textContent=title;
-  document.getElementById('modal-drive-link').href=driveUrl;
-  // Convert view URL to preview/embed URL
-  const fileId=driveUrl.match(/\/d\/([^/]+)\//)?.[1];
-  const embedUrl=fileId?`https://drive.google.com/file/d/${fileId}/preview`:'';
-  const iframe=document.getElementById('modal-iframe');
-  const loading=document.getElementById('modal-loading');
-  iframe.style.display='none';
-  loading.style.display='flex';
-  iframe.src=embedUrl;
+function openCertModal(title, fileId) {
+  document.getElementById('modal-cert-title').textContent = title;
+  document.getElementById('modal-loading').style.display = 'flex';
+  document.getElementById('modal-iframe').src = 'https://drive.google.com/file/d/' + fileId + '/preview';
   document.getElementById('cert-modal').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function onIframeLoad(){
-  document.getElementById('modal-loading').style.display='none';
-  document.getElementById('modal-iframe').style.display='block';
-}
-function closeCertModal(){
+function closeCertModal() {
   document.getElementById('cert-modal').classList.remove('open');
-  document.getElementById('modal-iframe').src='';
-  document.body.style.overflow='';
+  document.getElementById('modal-iframe').src = '';
+  document.getElementById('modal-loading').style.display = 'flex';
+  document.body.style.overflow = '';
 }
-document.getElementById('cert-modal').addEventListener('click',function(e){if(e.target===this)closeCertModal();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCertModal();});
+document.getElementById('cert-modal').addEventListener('click', function(e) { if (e.target === this) closeCertModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCertModal(); });
 </script>
 </body>
 </html>
